@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Navigation() {
@@ -22,7 +23,22 @@ export default function Navigation() {
   return (
     <nav className={scrolled ? 'nav-scrolled' : 'nav-transparent'}>
       <div className="nav-container-flex">
-        <div className="nav-logo-small">
+        <div className="nav-logo-small" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <div style={{
+            width: '50px',
+            height: '50px',
+            borderRadius: '50%',
+            overflow: 'hidden',
+            position: 'relative',
+            zIndex: 10
+          }}>
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
           <h1>UW SKATECLUB</h1>
         </div>
         <ul className="nav-links">

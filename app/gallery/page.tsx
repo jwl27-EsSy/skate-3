@@ -60,7 +60,7 @@ export default function Gallery() {
 
     return (
         <main>
-            <div className="hero">
+            <div className="gallery-hero">
                 <div className="container">
                     <h1>GALLERY</h1>
                     <p>VIDEOS, CLIPS, AND CARNAGE</p>
