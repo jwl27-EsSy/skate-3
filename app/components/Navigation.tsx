@@ -24,28 +24,35 @@ export default function Navigation() {
     <nav className={scrolled ? 'nav-scrolled' : 'nav-transparent'}>
       <div className="nav-container-flex">
         <div className="nav-logo-small" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <div style={{
-            width: '50px',
-            height: '50px',
-            borderRadius: '50%',
-            overflow: 'hidden',
-            position: 'relative',
-            zIndex: 10
-          }}>
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              fill
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-          <h1>UW SKATECLUB</h1>
+          <Link
+            href="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            style={{ display: 'flex', alignItems: 'center', gap: '15px', textDecoration: 'none', color: 'inherit' }}
+          >
+            <div style={{
+              width: '50px',
+              height: '50px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              position: 'relative',
+              zIndex: 10
+            }}>
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <h1>UW SKATECLUB</h1>
+          </Link>
         </div>
         <ul className="nav-links">
           <li><Link href="/">HOME</Link></li>
           <li><Link href="/about">ABOUT</Link></li>
           <li><Link href="#">EVENTS</Link></li>
           <li><Link href="/gallery">GALLERY</Link></li>
+          <li><Link href="/join">JOIN</Link></li>
         </ul>
       </div>
     </nav>
