@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main>
@@ -9,7 +11,7 @@ export default function Home() {
           </div>
           <div className="hero-buttons">
             <button className="btn btn-secondary">VIEW STYLES</button>
-            <button className="btn btn-primary">JOIN COMMUNITY</button>
+            <Link href="/join" className="btn btn-primary">JOIN COMMUNITY</Link>
           </div>
         </div>
       </div>
@@ -17,7 +19,23 @@ export default function Home() {
       <div className="latest-section">
         <div className="container latest-grid">
           <div className="latest-text-content">
-            <h2>LATEST</h2>
+            <div style={{ width: 'fit-content', marginBottom: '30px' }}>
+              <h2 style={{ marginBottom: '0', lineHeight: '0.85' }}>LATEST</h2>
+              <div style={{
+                fontFamily: 'Oswald, sans-serif',
+                fontWeight: '700',
+                fontSize: '1.5rem',
+                color: '#fff',
+                display: 'flex',
+                justifyContent: 'space-between',
+                lineHeight: '1',
+                width: '100%',
+                letterSpacing: '0.05em',
+                marginTop: '10px'
+              }}>
+                <span>CLIP</span> <span>OF</span> <span>THE</span> <span>WEEK</span>
+              </div>
+            </div>
             <p>
               <span className="highlight-span">
                 <span className="text-highlight">UW SKATECLUB</span> is the heart of the Seattle collegiate scene.
