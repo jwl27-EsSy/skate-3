@@ -363,7 +363,7 @@ ul.skate-list li::before {
 }
 
 .text-highlight {
-  color: #ff0000;
+  color: #4b2e83;
   font-weight: 700;
 }
 
@@ -404,4 +404,252 @@ ul.skate-list li::before {
   .hero h1 {
     font-size: 2.5rem;
   }
+}
+
+/* REDESIGN - LATEST SECTION */
+.latest-section {
+  position: relative;
+  background-color: #050505;
+  padding: 80px 0;
+  border-bottom: 5px solid #ffb700;
+  border-top: 5px solid #ffb700;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.latest-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/seattle-grunge.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  filter: brightness(1.5) contrast(1.2);
+  z-index: -1;
+}
+
+.latest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* .latest-text-content intentionally left empty or removed if no specific styles needed */
+
+.latest-text-content h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5rem;
+  line-height: 0.9;
+  margin-bottom: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.latest-text-content p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  border-left: 3px solid #ffb700;
+  padding-left: 0;
+}
+
+.latest-text-content .highlight-span {
+  background-color: #000;
+  color: #fff;
+  display: inline;
+  padding: 10px 20px 10px 15px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 5px 20px 10px 25px;
+}
+
+.latest-image-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  border: 2px solid #333;
+}
+
+.latest-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.latest-image-placeholder::after {
+  content: 'FEATURED';
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+  background: #4b2e83;
+  color: #fff;
+  padding: 5px 40px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  transform: rotate(-5deg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* REDESIGN - WHAT WE DO GRID */
+.what-we-do-section {
+  padding: 80px 0;
+  background: #000;
+  background-image: radial-gradient(circle at center, #111 0%, #000 70%);
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-card {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  padding: 40px 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: #ffb700;
+  background: #0f0f0f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.feature-card p {
+  color: #999;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  z-index: 2;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #222;
+  transition: background 0.3s;
+}
+
+.feature-card:hover::before {
+  background: #ffb700;
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+  font-family: 'Arial', sans-serif;
+  /* Fallback for icon font */
+}
+
+.feature-card:hover .card-icon {
+  color: #ff0000;
+}
+
+/* Responsive adjustments for new layout */
+@media (max-width: 900px) {
+  .latest-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .latest-text-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .latest-image-container {
+    height: 300px;
+    order: -1;
+    /* Image on top on mobile */
+  }
+
+  .grid-3-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* GALLERY PAGE HERO */
+.gallery-hero {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid #ffb700;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #050505;
+}
+
+.gallery-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/uw-grunge.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  filter: brightness(1.5) contrast(1.2);
+  z-index: -1;
+}
+
+.gallery-hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.gallery-hero p {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
 }
